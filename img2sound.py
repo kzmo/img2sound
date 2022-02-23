@@ -16,9 +16,9 @@ import scipy.io.wavfile as wavfile
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='Convert image file to audio spectrum \n' +
-                    'HINT: (Sample length = frequency resolution *' +
+                    'HINT: Sound file length = (FFT block size *' +
                     ' image horizontal resolution) * (1 - overlap) /' +
-                    'sample rate',
+                    ' sample rate',
         formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument('inputfile', type=str,
@@ -29,7 +29,8 @@ if __name__ == "__main__":
                         help="Frequency resolution (FFT block size). "
                         "Default 1024")
     parser.add_argument('--linear', action='store_true', default=False,
-                        help="Use linear scale instead of logarithmic")
+                        help="Use a linear frequency scale instead of" +
+                             " logarithmic")
     parser.add_argument('--randomphases', action='store_true', default=False,
                         help="Randomize phases")
     parser.add_argument('--overlap', type=float, default=0.75,
