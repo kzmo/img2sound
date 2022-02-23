@@ -35,10 +35,10 @@ Positional arguments:
 
 Optional arguments:
 - **-h**, **--help**:        Command line help
-- **--sfreq SFREQ**:      Sampling frequency in Hz
-- **--size SIZE**:        Frequency resolution (FFT block size). Default 1024
-- **--linear**:           Use a linear frequency scale instead of logarithmic
-- **--randomphases**:     Randomize phases
+- **--sfreq SFREQ**:      Sampling frequency in Hz. Default 44100.
+- **--size SIZE**:        Frequency resolution (FFT block size). Default 1024.
+- **--linear**:           Use a linear frequency scale instead of logarithmic.
+- **--randomphases**:     Randomize phases.
 - **--overlap OVERLAP**:  ISTFT block overlap. Defaults to 0.75 blocks.
 
 ## Hints

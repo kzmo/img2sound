@@ -22,17 +22,17 @@ if __name__ == "__main__":
         formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument('inputfile', type=str,
-                        help="Input image file to be converted")
+                        help="Input image file to be converted.")
     parser.add_argument('--sfreq', type=int, default=44100,
-                        help="Sampling frequency in Hz")
+                        help="Sampling frequency in Hz. Default 44100.")
     parser.add_argument('--size', type=int, default=1024,
-                        help="Frequency resolution (FFT block size). "
-                        "Default 1024")
+                        help="Frequency resolution (FFT block size)." +
+                        " Default 1024.")
     parser.add_argument('--linear', action='store_true', default=False,
                         help="Use a linear frequency scale instead of" +
-                             " logarithmic")
+                             " logarithmic.")
     parser.add_argument('--randomphases', action='store_true', default=False,
-                        help="Randomize phases")
+                        help="Randomize phases.")
     parser.add_argument('--overlap', type=float, default=0.75,
                         help="ISTFT block overlap. Defaults to 0.75 blocks.")
     args = parser.parse_args()
