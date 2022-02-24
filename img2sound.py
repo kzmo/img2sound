@@ -62,12 +62,12 @@ if __name__ == "__main__":
         conv_table = (np.logspace(math.log(freq_min, base),
                                   math.log(nperseg, base),
                                   num=image_data.shape[0],
-                                  base=base) - 1).astype(np.int)
+                                  base=base) - 1).astype(int)
     else:
         # Linear scaling conversion table
         conv_table = np.linspace(0,
                                  nperseg - 1,
-                                 num=image_data.shape[0]).astype(np.int)
+                                 num=image_data.shape[0]).astype(int)
 
     # Scale to vertically to FFT block size using the conversion table
     for line_nr, line in zip(range(stft_data.shape[1]), image_data.T):
