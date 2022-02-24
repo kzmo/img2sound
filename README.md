@@ -2,7 +2,7 @@
 A Python script that converts image files to sound files with the image in the sound spectrum.
 
 ## Requirements
-Tested in Python 3.9 and Windows 10.
+Tested with Python 3.8 and 3.9 in Windows 10 and Fedora.
 
 ## Installation
 Clone img2sound project from GitHub using Git from command line:
