@@ -43,6 +43,7 @@ if __name__ == "__main__":
     filename = args.inputfile
     sfreq = args.sfreq
     nperseg = args.size
+    overlap = args.overlap
 
     # Load image and convert to grayscale using luminosity
     image = Image.open(filename).convert('L')
@@ -83,7 +84,7 @@ if __name__ == "__main__":
 
     # Create time-domain audio from the frequency domain blocks
     times, sound_data = istft(stft_data, fs=sfreq, nperseg=nperseg,
-                              noverlap=nperseg * 0.75)
+                              noverlap=nperseg * overlap)
 
     # Remove the DC level
     sound_data = sound_data - np.average(sound_data)
